@@ -2,8 +2,10 @@
 name = "livekit-course"
 version = "0.1.0"
 requires-python = ">=3.11"
+
 dependencies = [
     "flask>=3.1.3",
+    "gunicorn>=22.0.0",  # ✅ Add this line back
     "livekit-agents[mcp,sarvam,silerio,silero,turn-detector]~=1.3",
     "livekit-api>=1.1.0",
     "livekit-plugins-noise-cancellation~=0.2",
