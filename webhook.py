@@ -6,6 +6,10 @@ from dotenv import load_dotenv
 load_dotenv(".env.local")
 app = Flask(__name__)
 
+@app.route("/health", methods=["GET"])
+def health():
+    return {"status": "healthy"}, 200
+
 @app.route("/call", methods=["POST"])
 def call():
     phone = request.json.get("phone")
